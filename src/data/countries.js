@@ -7,11 +7,11 @@ const allCountries = async () => {
 
 const arrayCountriesTransformed = array => {
   const countries = array.map(country => {
-    const { area, capital, flag, name, population, region } = country;
+    const { area, capital, flags, name, population, region } = country;
     return {
       area,
       capital,
-      flag,
+      flag: flags.svg,
       id: getNewId(),
       name: name.common,
       nameLowerCase: name.common.toLowerCase(),
